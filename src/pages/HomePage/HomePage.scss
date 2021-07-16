@@ -21,7 +21,26 @@
 
   &__content {
     display: block;
-		width: 100%;
+    width: 100%;
     padding: 32px 40px;
+  }
+}
+
+.content-page-home {
+  &__top {
+    margin-bottom: 16px;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+
+    > li {
+      display: block;
+      flex: 0 1 16.5%;
+    }
+  }
+
+  &__list {
   }
 }

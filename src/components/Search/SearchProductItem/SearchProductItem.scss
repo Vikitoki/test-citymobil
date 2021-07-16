@@ -1,0 +1,52 @@
+@import "../../../styles/default/variables.scss";
+
+.search-product-item {
+  display: block;
+  width: 100%;
+
+  background: none;
+
+  @media (min-width: $md2 + px) {
+    &:hover {
+      background-color: lightskyblue;
+    }
+
+    &:active {
+      background-color: rgb(112, 181, 224);
+    }
+  }
+
+  &__text {
+    width: 100%;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f232e;
+    line-height: 16px;
+
+    pointer-events: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-value {
+    display: block;
+    flex: 0 1 16.5%;
+    width: 100%;
+    padding: 12px 16px;
+
+    text-align: center;
+
+    background: none;
+    border: 1px solid rgba(198, 209, 221, 0.5);
+
+    transition: all 0.3s ease;
+
+    &_first {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../styles/default/variables.scss";
+
+.search-menu-item {
+  display: block;
+  width: 100%;
+  padding: 16px;
+
+  background: none;
+  border: 1px solid rgba(198, 209, 221, 0.5);
+  border-bottom: none;
+  background-color: rgba(240, 242, 244, 0.5);
+	
+  font-size: 14px;
+  font-weight: 500;
+  color: #7b8395;
+  line-height: 16px;
+
+  transition: all 0.3s ease;
+
+  @media (min-width: $md2 + px) {
+    &:hover {
+      background-color: rgba(213, 215, 218, 0.5);
+    }
+
+    &:active {
+      background-color: rgba(181, 181, 182, 0.5);
+    }
+  }
+
+  &__value {
+    min-width: 172px;
+    padding: 12px 16px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #1f232e;
+    line-height: 16px;
+    text-align: center;
+
+    pointer-events: none;
+  }
+}
