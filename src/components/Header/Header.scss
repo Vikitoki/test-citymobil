@@ -1,0 +1,42 @@
+@import "../../styles/default/variables.scss";
+
+.header {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: #474747;
+
+  &__container {
+  }
+
+  &__menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    margin-right: 25px;
+
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+
+    @media (min-width: $md2 + px) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

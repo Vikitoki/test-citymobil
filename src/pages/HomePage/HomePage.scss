@@ -1,0 +1,27 @@
+.home-page {
+  display: flex;
+  width: 100%;
+  flex: 1 1 100%;
+  min-height: 100%;
+
+  &__sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 282px;
+
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+    line-height: 36px;
+
+    background-color: #e4e5e6;
+  }
+
+  &__content {
+    display: block;
+		width: 100%;
+    padding: 32px 40px;
+  }
+}
