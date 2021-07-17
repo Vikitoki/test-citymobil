@@ -3,6 +3,7 @@ import {
   fetchSearchMainInfoFailure,
   fetchSearchMainInfoRequest,
   fetchSearchMainInfoSuccess,
+  selectSearchItem,
 } from "../store/searchMain/action-creators";
 import { ISearchMainInfo, SearchMainActions } from "../types/searchMain";
 
@@ -21,9 +22,14 @@ export const getMainSearchInfo = () => {
 
       const data: ISearchMainInfo = await response.json();
       dispatch(fetchSearchMainInfoSuccess(data));
-			
     } catch (error) {
       dispatch(fetchSearchMainInfoFailure(ERROR_MESSAGE));
     }
+  };
+};
+
+export const getSelectSearchItem = (info: string) => {
+  return async (disptach: Dispatch<SearchMainActions>) => {
+    disptach(selectSearchItem(info));
   };
 };

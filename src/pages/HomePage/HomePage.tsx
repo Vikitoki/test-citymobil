@@ -48,7 +48,7 @@ export const HomePage: FC = () => {
                   {seachMainInfo.tariffs_list.length !== 0 &&
                     seachMainInfo.tariffs_list.map((item) => {
                       return (
-                        <li>
+                        <li key={uuidv4()}>
                           <SearchMenuItem info={item} />
                         </li>
                       );
@@ -65,7 +65,6 @@ export const HomePage: FC = () => {
                     );
                   })}
               </ul>
-              <span className="content-page-home__selected"></span>
             </div>
           </>
         )}

@@ -4,13 +4,24 @@ import { ISearchMainInfoCarItem } from "../../../types/searchMain";
 import { v4 as uuidv4 } from "uuid";
 
 import "./SearchProductItem.scss";
+import { useDispatch } from "react-redux";
+import { getSelectSearchItem } from "../../../services/searchMainActions";
 
 interface SearchProductItemProps {
   info: ISearchMainInfoCarItem;
 }
 
 export const SearchProductItem: FC<SearchProductItemProps> = ({ info }) => {
+  // Variables
+  const dispatch = useDispatch();
   const { mark, model, tariffs } = info;
+
+  // Handlers
+
+  const searchProductButtonHandler = (year: string) => {
+    const resultValue = `Выбран автомобиль ${mark} ${model} ${year} года выпуска`;
+    dispatch(getSelectSearchItem(resultValue));
+  };
 
   return (
     <div className="search-product-item">
@@ -24,6 +35,7 @@ export const SearchProductItem: FC<SearchProductItemProps> = ({ info }) => {
           .map((item) => {
             return (
               <button
+                onClick={() => searchProductButtonHandler(item.year)}
                 type="button"
                 key={uuidv4()}
                 className="search-product-item__list-value"
@@ -32,7 +44,7 @@ export const SearchProductItem: FC<SearchProductItemProps> = ({ info }) => {
               </button>
             );
           })}
-					
+
         {Object.values(tariffs).length < 6
           ? Array(6 - Object.values(tariffs).length)
               .fill("-")
