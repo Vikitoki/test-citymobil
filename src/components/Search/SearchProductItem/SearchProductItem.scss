@@ -4,18 +4,6 @@
   display: block;
   width: 100%;
 
-  background: none;
-
-  @media (min-width: $md2 + px) {
-    &:hover {
-      background-color: lightskyblue;
-    }
-
-    &:active {
-      background-color: rgb(112, 181, 224);
-    }
-  }
-
   &__text {
     width: 100%;
 
@@ -29,7 +17,6 @@
 
   &__list {
     display: flex;
-    align-items: center;
   }
 
   &__list-value {
@@ -45,8 +32,22 @@
 
     transition: all 0.3s ease;
 
+    @media (min-width: $md2 + px) {
+      &:hover {
+        background-color: lightskyblue;
+      }
+
+      &:active {
+        background-color: rgb(112, 181, 224);
+      }
+    }
+
     &_first {
       text-align: left;
+    }
+
+    &_not-allowed {
+      cursor: not-allowed;
     }
   }
 }

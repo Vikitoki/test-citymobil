@@ -4,7 +4,7 @@ import {
   FETCH_SEARCH_MAIN_INFO_SUCCESS,
 } from "../store/searchMain/action-variables";
 
-export interface ISearchMainInfoCars {
+export interface ISearchMainInfoCarItem {
   mark: string;
   model: string;
   tariffs: {
@@ -16,7 +16,7 @@ export interface ISearchMainInfoCars {
 
 export interface ISearchMainInfo {
   tariffs_list: string[];
-  cars: ISearchMainInfoCars[];
+  cars: ISearchMainInfoCarItem[];
 }
 
 export interface SearchMainState {
