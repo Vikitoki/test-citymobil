@@ -4,8 +4,8 @@ import {
   fetchSearchMainInfoRequest,
   fetchSearchMainInfoSuccess,
   selectSearchItem,
-} from "../store/searchMain/action-creators";
-import { ISearchMainInfo, SearchMainActions } from "../types/searchMain";
+} from "../../store/searchMain/action-creators";
+import { ISearchMainInfo, SearchMainActions } from "../../types/searchMain";
 
 const ERROR_MESSAGE = "Что-то пошло не так, повторите попытку через 5 секунд!";
 
@@ -17,7 +17,7 @@ export const getMainSearchInfo = () => {
       const response = await fetch("https://city-mobil.ru/api/cars");
 
       if (!response.ok) {
-        throw new Error(`${ERROR_MESSAGE}`);
+        throw new Error(ERROR_MESSAGE);
       }
 
       const data: ISearchMainInfo = await response.json();

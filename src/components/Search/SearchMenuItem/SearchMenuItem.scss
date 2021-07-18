@@ -9,13 +9,23 @@
   border: 1px solid rgba(198, 209, 221, 0.5);
   border-bottom: none;
   background-color: rgba(240, 242, 244, 0.5);
-	
+
   font-size: 14px;
   font-weight: 500;
   color: #7b8395;
   line-height: 16px;
 
   transition: all 0.3s ease;
+
+  &_active {
+    background-color: lightgreen;
+
+    @media (min-width: $md2 + px) {
+      &:hover {
+
+      }
+    }
+  }
 
   @media (min-width: $md2 + px) {
     &:hover {

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import "./SearchProductItem.scss";
 import { useDispatch } from "react-redux";
-import { getSelectSearchItem } from "../../../services/searchMainActions";
+import { getSelectSearchItem } from "../../../services/rest/searchMainActions";
 
 interface SearchProductItemProps {
   info: ISearchMainInfoCarItem;
